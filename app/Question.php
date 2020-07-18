@@ -11,4 +11,11 @@ class Question extends Model
     public function user () {
     	return $this->belongsTo('App\User');
     }
+
+    /*//mutator
+    public function setTitleAttribute($value) {
+        $this->attributes['title'] = $value;
+        $this->attributes['slug'] = str_slug($value);
+    }
+*/
 }
