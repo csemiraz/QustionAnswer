@@ -14,8 +14,8 @@ class QuestionController extends Controller
      */
     public function index()
     {
-        $questions = Question::paginate(5);
-        return view('questions.index', compact($questions));
+        $questions = Question::latest()->paginate(5);
+        return view('questions.index', compact('questions'));
     }
 
     /**
